@@ -14,6 +14,17 @@ st.set_page_config(page_title="K-Means APM", layout="wide")
 st.title("PENGELOMPOKAN PROVINSI DI INDONESIA BERDASARKAN APM")
 st.write("Menggunakan Algoritma K-Means Clustering")
 
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings
+import io
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+
 """## 1. Business Understanding
 
 
@@ -25,8 +36,6 @@ st.write("Menggunakan Algoritma K-Means Clustering")
 
 ## 2. Data Understanding
 """
-
-!pip install streamlit
 
 import streamlit as st
 import pandas as pd
